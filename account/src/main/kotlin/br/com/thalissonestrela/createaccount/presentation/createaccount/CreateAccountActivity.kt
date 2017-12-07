@@ -1,4 +1,4 @@
-package br.com.thalissonestrela.createaccount.presentation.create
+package br.com.thalissonestrela.createaccount.presentation.createaccount
 
 import android.content.Context
 import android.content.Intent

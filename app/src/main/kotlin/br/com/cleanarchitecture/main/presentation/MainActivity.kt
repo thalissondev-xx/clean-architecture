@@ -7,7 +7,7 @@ import br.com.cleanarchitecture.main.domain.MainActivityContract.IPresenter
 import br.com.cleanarchitecture.main.domain.MainActivityContract.IView
 import br.com.cleanarchitecture.main.presentation.di.DaggerMainActivityComponent
 import br.com.cleanarchitecture.main.presentation.di.MainActivityModule
-import br.com.thalissonestrela.createaccount.presentation.create.CreateAccountActivity
+import br.com.thalissonestrela.createaccount.presentation.createaccount.CreateAccountActivity
 import kotlinx.android.synthetic.main.activity_main.*
 import javax.inject.Inject
 
