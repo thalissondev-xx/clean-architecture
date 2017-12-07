@@ -36,4 +36,6 @@ ext {
 
     support_constraint_layout_version = "1.0.2"
     support_version = "26.1.0"
+
+    dagger_version = "2.13"
 }
