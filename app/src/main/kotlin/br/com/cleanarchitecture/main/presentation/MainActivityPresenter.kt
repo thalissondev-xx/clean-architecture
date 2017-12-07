@@ -8,7 +8,7 @@ import javax.inject.Inject
 class MainActivityPresenter @Inject constructor(private val view: IView): IPresenter {
 
     override fun onUserRequestCreateAccount() {
-
+        view.goToCreateAccount()
     }
 
 }
