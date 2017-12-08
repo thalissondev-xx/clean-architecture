@@ -4,7 +4,9 @@
 
     <application>
 
-        <activity android:name=".presentation.createaccount.CreateAccountActivity"/>
+        <activity
+            android:name=".presentation.createaccount.CreateAccountActivity"
+            android:label="@string/label_create_account"/>
 
     </application>
 

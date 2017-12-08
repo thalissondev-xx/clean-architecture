@@ -1,4 +1,4 @@
 <resources>
-    <string name="app_name">clean-architecture</string>
+    <string name="app_name">Application</string>
     <string name="create_account">Create Account</string>
 </resources>
