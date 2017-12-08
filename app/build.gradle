@@ -4,6 +4,8 @@ apply plugin: 'kotlin-android'
 
 apply plugin: 'kotlin-android-extensions'
 
+apply plugin: 'kotlin-kapt'
+
 android {
     compileSdkVersion 26
     defaultConfig {
@@ -33,6 +35,7 @@ kapt {
 }
 
 dependencies {
+    implementation project(":share")
     implementation project(":account")
 
     implementation fileTree(dir: 'libs', include: ['*.jar'])

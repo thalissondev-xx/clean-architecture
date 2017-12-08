@@ -4,8 +4,6 @@ apply plugin: 'kotlin-android'
 
 apply plugin: 'kotlin-android-extensions'
 
-apply plugin: 'kotlin-kapt'
-
 android {
     compileSdkVersion 26
 
@@ -37,8 +35,6 @@ kapt {
 }
 
 dependencies {
-    implementation project(':share')
-
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
     implementation "com.android.support:appcompat-v7:$support_version"
@@ -52,9 +48,4 @@ dependencies {
     implementation "com.google.dagger:dagger:$dagger_version"
     annotationProcessor "com.google.dagger:dagger-compiler:$dagger_version"
     kapt "com.google.dagger:dagger-compiler:$dagger_version"
-
-    implementation "io.reactivex.rxjava2:rxandroid:$rxandroid_version"
-    // Because RxAndroid releases are few and far between, it is recommended you also
-    // explicitly depend on RxJava's latest version for bug fixes and new features.
-    implementation "io.reactivex.rxjava2:rxjava:$rxjava_version"
 }
