@@ -1,7 +1,7 @@
 package br.com.thalissonestrela.createaccount.presentation.createaccount.di
 
 import br.com.thalissonestrela.createaccount.presentation.createaccount.CreateAccountActivity
-import br.com.thalissonestrela.shared.scopes.ActivityScope
+import br.com.thalissonestrela.share.scopes.ActivityScope
 import dagger.Subcomponent
 
 @ActivityScope

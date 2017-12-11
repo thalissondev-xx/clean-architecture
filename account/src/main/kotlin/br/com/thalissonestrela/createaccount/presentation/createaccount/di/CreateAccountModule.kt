@@ -3,7 +3,7 @@ package br.com.thalissonestrela.createaccount.presentation.createaccount.di
 import br.com.thalissonestrela.createaccount.domain.createaccount.CreateAccountContract.IPresenter
 import br.com.thalissonestrela.createaccount.domain.createaccount.CreateAccountContract.IView
 import br.com.thalissonestrela.createaccount.presentation.createaccount.CreateAccountPresenter
-import br.com.thalissonestrela.shared.scopes.ActivityScope
+import br.com.thalissonestrela.share.scopes.ActivityScope
 import dagger.Module
 import dagger.Provides
 

@@ -1,4 +1,4 @@
-package br.com.thalissonestrela.shared;
+package br.com.thalissonestrela.share;
 
 import org.junit.Test;
 

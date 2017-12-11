@@ -1,4 +1,4 @@
-package br.com.thalissonestrela.shared;
+package br.com.thalissonestrela.share;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

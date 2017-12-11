@@ -5,8 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/account/account.iml" filepath="$PROJECT_DIR$/account/account.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/cleanarchitecture.iml" filepath="$PROJECT_DIR$/cleanarchitecture.iml" />
-      <module fileurl="file://$PROJECT_DIR$/account/createaccount.iml" filepath="$PROJECT_DIR$/account/createaccount.iml" />
-      <module fileurl="file://$PROJECT_DIR$/share/shared.iml" filepath="$PROJECT_DIR$/share/shared.iml" />
+      <module fileurl="file://$PROJECT_DIR$/share/share.iml" filepath="$PROJECT_DIR$/share/share.iml" />
     </modules>
   </component>
 </project>

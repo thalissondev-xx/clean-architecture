@@ -1,13 +1,14 @@
 package br.com.cleanarchitecture.main
 
 import android.app.Application
+import br.com.thalissonestrela.createaccount.presentation.createaccount.di.CreateAccountComponent
 import br.com.thalissonestrela.createaccount.presentation.createaccount.di.CreateAccountComponentCreator
 import br.com.thalissonestrela.createaccount.presentation.createaccount.di.CreateAccountModule
 
 class CustomApplication: Application(),
         CreateAccountComponentCreator {
 
-    lateinit var appComponent: AppComponent
+    private lateinit var appComponent: AppComponent
 
     override fun onCreate() {
         super.onCreate()
@@ -22,7 +23,7 @@ class CustomApplication: Application(),
                 .build()
     }
 
-    override fun plus(createAccountModule: CreateAccountModule)
+    override fun plus(createAccountModule: CreateAccountModule): CreateAccountComponent
             = appComponent.plus(createAccountModule)
 
 }
