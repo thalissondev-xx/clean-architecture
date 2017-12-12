@@ -8,10 +8,11 @@ import br.com.thalissonestrela.createaccount.R
 import br.com.thalissonestrela.createaccount.domain.createaccount.CreateAccountContract.IPresenter
 import br.com.thalissonestrela.createaccount.domain.createaccount.CreateAccountContract.IView
 import br.com.thalissonestrela.createaccount.domain.createaccount.model.CreateUser
+import dagger.android.support.DaggerAppCompatActivity
 import kotlinx.android.synthetic.main.activity_create_account.*
 import javax.inject.Inject
 
-class CreateAccountActivity : AppCompatActivity(), IView {
+class CreateAccountActivity : DaggerAppCompatActivity(), IView {
 
     @Inject
     lateinit var presenter: IPresenter
