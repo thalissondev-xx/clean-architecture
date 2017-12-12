@@ -8,7 +8,6 @@ import br.com.thalissonestrela.createaccount.R
 import br.com.thalissonestrela.createaccount.domain.createaccount.CreateAccountContract.IPresenter
 import br.com.thalissonestrela.createaccount.domain.createaccount.CreateAccountContract.IView
 import br.com.thalissonestrela.createaccount.domain.createaccount.model.CreateUser
-import br.com.thalissonestrela.createaccount.presentation.createaccount.di.CreateAccountComponentCreator
 import br.com.thalissonestrela.createaccount.presentation.createaccount.di.CreateAccountModule
 import kotlinx.android.synthetic.main.activity_create_account.*
 import javax.inject.Inject

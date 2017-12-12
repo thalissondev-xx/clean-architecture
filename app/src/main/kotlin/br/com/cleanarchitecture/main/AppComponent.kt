@@ -1,12 +1,30 @@
 package br.com.cleanarchitecture.main
 
-import br.com.thalissonestrela.createaccount.presentation.createaccount.di.CreateAccountComponent
-import br.com.thalissonestrela.createaccount.presentation.createaccount.di.CreateAccountModule
+import android.app.Application
+import dagger.BindsInstance
 import dagger.Component
+import dagger.android.AndroidInjector
+import dagger.android.DaggerApplication
+import dagger.android.support.AndroidSupportInjectionModule
 import javax.inject.Singleton
 
 @Singleton
-@Component(modules = [(AppModule::class)])
-interface AppComponent {
-    fun plus(createAccountModule: CreateAccountModule): CreateAccountComponent
+@Component(modules = [
+            (AndroidSupportInjectionModule::class),
+            (AppModule::class),
+            (ActivityBuilder::class)])
+interface AppComponent: AndroidInjector<DaggerApplication> {
+
+    fun inject(customApplication: CustomApplication)
+    override fun inject(instance: DaggerApplication)
+
+    @Component.Builder
+    interface Builder {
+
+        @BindsInstance
+        fun application(application: Application)
+        fun build(): AppComponent
+
+    }
+
 }
