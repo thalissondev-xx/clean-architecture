@@ -1,33 +1,32 @@
 package br.com.cleanarchitecture.main
 
 import android.app.Application
+import android.content.Context
+import dagger.Binds
 import dagger.Module
 import dagger.Provides
+import io.reactivex.Scheduler
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
 import javax.inject.Named
-import javax.inject.Singleton
+
+@Module(includes = [InnerAppModule::class])
+abstract class AppModule {
+
+    @Binds
+    abstract fun provideContext(application: Application): Context
+
+}
 
 @Module
-class AppModule(val application: Application) {
+class InnerAppModule {
 
-    @Singleton
-    @Provides
-    fun provideApplication() = application
-
-    @Singleton
-    @Provides
-    @Named("Application")
-    fun provideApplicationContext() = application.applicationContext
-
-    @Singleton
     @Provides
     @Named("IOScheduler")
-    fun provideIOScheduler() = Schedulers.io()
+    fun provideIOScheduler(): Scheduler = Schedulers.io()
 
-    @Singleton
     @Provides
     @Named("MainScheduler")
-    fun provideAndroidScheduler() = AndroidSchedulers.mainThread()
+    fun provideMainScheduler(): Scheduler = AndroidSchedulers.mainThread()
 
 }

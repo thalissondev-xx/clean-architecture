@@ -8,7 +8,6 @@ import br.com.thalissonestrela.createaccount.R
 import br.com.thalissonestrela.createaccount.domain.createaccount.CreateAccountContract.IPresenter
 import br.com.thalissonestrela.createaccount.domain.createaccount.CreateAccountContract.IView
 import br.com.thalissonestrela.createaccount.domain.createaccount.model.CreateUser
-import br.com.thalissonestrela.createaccount.presentation.createaccount.di.CreateAccountModule
 import kotlinx.android.synthetic.main.activity_create_account.*
 import javax.inject.Inject
 
@@ -18,19 +17,12 @@ class CreateAccountActivity : AppCompatActivity(), IView {
     lateinit var presenter: IPresenter
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        inject()
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_create_account)
 
         createAccount.setOnClickListener {
             presenter.createAccount(getUserForCreate())
         }
-    }
-
-    private fun inject() {
-        (applicationContext as CreateAccountComponentCreator)
-                .plus(CreateAccountModule(this))
-                .inject(this)
     }
 
     private fun getUserForCreate()

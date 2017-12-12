@@ -6,6 +6,12 @@ import dagger.android.DaggerApplication
 class CustomApplication: DaggerApplication() {
 
     override fun applicationInjector(): AndroidInjector<out DaggerApplication> {
+        val appComponent = DaggerAppComponent
+                .builder()
+                .application(this)
+                .build()
 
+        appComponent.inject(this)
+        return appComponent
     }
 }
